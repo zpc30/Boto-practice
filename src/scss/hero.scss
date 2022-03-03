@@ -1,0 +1,235 @@
+@use 'design';
+.hero {
+    position: relative;
+    padding-top: 6em;
+    padding-left: 5%;
+    color: white;
+    .backRed {
+        position: absolute;
+        left: -810px;
+        bottom: 0px;
+        z-index:0;
+        background: design.$primary1-color;
+        width: 1170px; 
+        height: 1000px;
+    }
+    .heroImage {
+        display: none;
+    }
+    .heroText {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 45px;
+
+            span {
+                display: block;
+                font-weight: 800;
+                font-size: 58px;
+            }
+        }
+        h1::after {
+            background: white;
+            width: 200px;
+            height: 50px;
+        }
+        p {
+            text-align: justify;
+            z-index: 2;
+            position: relative;
+            margin-top: 2em;
+            font-size: 16px;
+            font-weight: 200;
+            width: 260px;
+            word-break: break-all;
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+    .blue {
+        position: absolute;
+        right: 38px;
+        z-index: 1;
+        top: 30px;
+        width: 15px;
+        height: 500px;
+        background: design.$primary2-color;
+    }
+
+}
+@media screen and (min-width: 400px) {
+    .hero {
+        height: 515px;
+        .blue {
+            right: 50px;
+        }
+        .red {
+            display: none;   
+        }
+        .backRed {
+            left: -950px;
+        }
+        .heroText {
+            position: relative;
+            height: 350px;
+            color: black;
+            h1 {
+                position: relative;
+                z-index: 2;
+                padding-left: .5em;
+            }
+            h1::after {
+                content: " ";
+                z-index: -1;
+                position: absolute;
+                background: white;
+                top: 20px;
+                width: 250px;
+                height: 100px;
+            }
+            p {
+                word-break: normal;
+                padding-left: 1.5em;
+                text-align: left;
+                width: 70%;
+            }
+        }
+    }   
+}
+@media screen and (min-width: 750px) {
+    .hero {
+        .heroText {
+            padding-top: 8em;
+            h1 {
+                font-size: 72px;
+                line-height: 70px;
+                span {
+                    font-size: 92px;
+                }
+            }
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                width: 85%;
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+        .blue {
+            height: 530px;
+            top: 80px;
+            right: 80px;
+        }
+        .red {
+            display: unset;
+            position: absolute;
+            right: 55px;
+            z-index: 0;
+            bottom: 20px;
+            width: 500px;
+            height: 15px;
+            background: design.$primary1-color;
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .hero {
+        margin: 0;
+        padding: 0;
+        height: 800px;
+        .heroText {
+            margin: 0;
+            padding-top: 12em;
+            width: 850px;
+            height: 500px;
+            left: 10%;
+            margin-left: 5%;
+            p {
+                font-size: 26px;
+            }
+        }
+        .heroText, .red, .blue {
+            right: 25px;
+        }
+        .blue {
+            height: 720px;
+            top: 60px;
+            right: 50px;
+        }
+        .red {
+            bottom: 40px;
+            width: 720px;
+        }
+    }
+}
+@media screen and (min-width: 1336px) {
+    .hero {
+        position: relative;
+        bottom: 32px;
+        height: 900px;
+        .red {
+            width: 500px;
+        }
+        .blue {
+            height: 1600px;
+            top: 200px;
+            right: 50px;
+        }
+        .backRed {
+            left: unset;
+            top: 0;
+            width: 60%;
+            height: 900px;
+            border-radius: 500px 0 0 0;
+            .heroImage {
+                display: block;
+                position: relative;
+                width: 450px;
+                margin: 7.5em auto;
+                img {
+                    display: block;
+                    width: 400px;
+                }
+                .logo {
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    top: 10px;
+                    left: 10px;
+                    border-radius: 0 1em 1em 0;
+                    z-index: 2;
+                    background: design.$primary1-color;
+                    color: white;
+                    h1 {
+                        font-family: 'BioRhyme', serif;
+                        font-size: 56px;
+                        line-height: 45px;
+                        margin-left: 5px;
+                        margin-top: 5px;
+                        span {
+                            font-family: 'BioRhyme', serif;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .heroText {
+            right: unset;
+            top: 170px;
+            left: 45%;
+            width: 500px;
+            p {
+                width: 600px;
+                font-size: 22px;
+            }
+        }
+    }
+}

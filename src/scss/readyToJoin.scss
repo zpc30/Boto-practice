@@ -1,0 +1,85 @@
+@use 'design';
+
+.readyToJoin {
+    text-align: center;
+    background: #C4C4C4;
+    .ready {
+        line-height: 35px;
+        background: white;
+        h1 {
+            font-size: 38px;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+        
+    }
+    h3 {
+        margin-bottom: 1em;
+    }
+    .form {
+        padding: 2em;    
+        .email {
+            border: 0;
+            padding: 1em;
+            margin: 0 auto;
+        }
+        .button {
+            border: 0;
+            background: design.$primary2-color;
+            margin-top: 1em;
+            padding: 1em 2em;
+            border-radius: 1em;
+            color: white;
+            font-size: 18px;
+            font-weight: 800;
+        }
+    }
+    
+}
+@media screen and (min-width: 500px){
+    .readyToJoin {
+
+        .form {
+            margin: 0em auto;
+            height: 100px;
+            max-width: 435px;
+            position: relative;
+            .email {
+                overflow: scroll;
+                position: absolute;
+                left: 50px;
+                width: 250px;
+                border-radius: 0 10px 10px 0;
+            }
+            .button {
+                right: 50px;
+                top: 14px;
+                border-radius: 0 10px 10px 0;
+                position: absolute;
+                padding: 10px 15px 10px 50px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 750px) {
+    .readyToJoin {
+        .ready {
+            line-height: 60px;
+            h1 {
+                font-size: 72px;
+            }
+            h3 {
+                font-size: 42px;
+            }
+        }
+        .form {
+            max-width: 550px;
+            .email {
+                width: 487px;                
+            }
+        }
+    }
+}

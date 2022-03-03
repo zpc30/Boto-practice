@@ -1,0 +1,103 @@
+@use 'design';
+
+.tooMuchToHandle {
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+    .white {
+        display: none;
+    }
+    img {
+        position: relative;
+        z-index: 2;
+        width: 65px;
+        display: block;
+        margin: 3em auto 1em;
+    }
+    h1 {
+        position: relative;
+        z-index: 2;
+        span {
+            display: block;
+        }
+    }
+    p {
+        z-index: 2;
+        position: relative;
+        margin: 0 2em;
+    }   
+    .red {
+        z-index: 1;
+        position: absolute;
+        top: 50px;
+        left: -50px;
+        width: 300px;
+        height: 500px;
+        border-radius: 0 25em 25em 0;
+        background: design.$primary1-color;
+    }
+}
+@media screen and (min-width: 400px) {
+    .tooMuchToHandle {
+        .red {
+            display: unset;
+        }
+    }
+}
+@media screen and (min-width: 500px) {
+    .tooMuchToHandle {
+        h1 {
+            position: relative;
+            z-index: 2;
+            padding-top: 4em;
+        }
+    }
+}
+@media screen and (min-width: 750px) {
+    .tooMuchToHandle {
+        h1 {
+            font-size: 72px;
+            font-weight: 600;
+            line-height: 70px;
+            span {
+                font-size: 82px;
+                font-weight: 800;
+                display: block;
+            }
+        }
+        img {
+            width: 100px;
+            margin-top: 5em;
+        }
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            margin: auto 8em;
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .tooMuchToHandle {
+        p {
+            font-size: 26px;
+        }
+        .red {
+            display: unset;
+        }
+    }
+}
+@media screen and (min-width: 1336px) {
+    .tooMuchToHandle {
+        h1 {
+            padding-top: 0;
+        }
+        .red {
+            height: 800px;
+            width: 450px;
+            border: 0 100% 100% 0;
+        }
+    }
+}

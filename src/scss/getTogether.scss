@@ -1,0 +1,218 @@
+@use 'design';
+
+.getTogether {
+    position: relative;
+    color: white;
+    .red {
+        position: absolute;
+        left: 38px;
+        z-index: 1;
+        top: 100px;
+        width: 15px;
+        height: 500px;
+        background: design.$primary1-color;
+    }
+    .backBlue {
+        position: absolute;
+        left: -810px;
+        z-index:0;
+        background: design.$primary2-color;
+        width: 1170px; 
+        height: 750px; 
+    }
+    .getTogetherText {
+        padding-top: 6em;
+        padding-left: 65px;
+        h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 45px;
+            span {
+                display: block;
+                font-weight: 800;
+                font-size: 58px;
+            }
+        }
+        p {
+            text-align: justify;
+            position: relative;
+            margin-top: 2em;
+            font-size: 16px;
+            font-weight: 200;
+            width: 260px;
+            word-break: break-all;
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+    .getTogetherDocGridWhite {
+        position: relative;
+        display: grid;
+        
+        margin-top: 1em;
+        grid-template-columns: 1fr 1fr;
+        max-width: 200px;
+        img {
+            margin-bottom: 1em;
+            width: 50%;
+        }
+    }
+    .getTogetherDocGrid {
+        display: none;
+    }
+    .getTogetherImage {
+        display: none;
+    }
+}
+@media screen and (min-width: 400px){
+    .getTogether {
+        .red {
+            display: unset;
+        }
+        .backBlue {
+            left: -950px;
+            border-radius: 0 0 20em 0;
+        }
+        .getTogetherText {
+            color: black;
+            h1 {
+                position: relative;
+                z-index: 2;
+                padding-left: .5em;
+            }
+            h1::after {
+                content: " ";
+                z-index: -1;
+                position: absolute;
+                background: white;
+                top: 20px;
+                width: 150px;
+                height: 100px;
+            }
+            p {
+                word-break: normal;
+                text-align: left;
+                padding-left: 2em;
+                width: 70%;
+            }
+        }
+        .getTogetherDocGridWhite {
+            display: none;
+        }
+        .getTogetherDocGrid {
+            display: contents;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding-left: 2em;
+            margin-top: 1em;
+            max-width: 300px;
+            img {
+                margin-bottom: 1em;
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 750px) {
+    .getTogether {
+        height: 850px;
+        .backBlue {
+            height: 100%;
+        }
+        .getTogetherText {
+            padding-top: 8em;
+            h1 {
+                font-size: 72px;
+                line-height: 60px;
+                span {
+                    font-size: 92px;
+                }
+            }
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                width: 85%;
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+        .getTogetherDocGrid {
+            img {
+                width: 120px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .getTogether {
+        .getTogetherText {
+            p {
+                font-size: 26px;
+            }
+        }
+        .red {
+            left: 35px;
+        }
+        .backBlue {
+            height: 1000px;
+        }
+        .getTogetherDocGrid {
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1336px) {
+    .getTogether {
+        top: -35px;
+        .red {
+            height: 800px;
+            top: 50px;
+        }
+        .backBlue {
+            left: unset;
+            width: 60%;
+            height: 900px;
+        }
+        .getTogetherDocGrid {
+            display: none;
+        }
+        .getTogetherDocGridWhite {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5em;
+            padding-left: 3em;
+            padding-top: 5em;
+            img {
+                width: 100px;
+            }
+        }
+        .getTogetherText {
+            p {
+                width: 600px;
+                color: white;
+                font-size: 22px;
+            }
+            h1::after {
+                top: 35px;
+                width: 500px;
+            }
+        }
+        .getTogetherImage {
+            display: unset;
+            position: absolute;
+            left: 60%;
+            top: 50px;
+            img {
+                width: 90%;
+                max-height: 850px;
+            }
+        }
+    }
+}
